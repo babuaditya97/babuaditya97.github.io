@@ -56,10 +56,11 @@ body {
   color: var(--text);
   background:
     radial-gradient(1200px 500px at 80% -10%, rgba(255, 50, 88, 0.07), transparent 60%),
+    radial-gradient(900px 600px at 8% 108%, rgba(120, 110, 220, 0.05), transparent 60%),
     linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     var(--bg);
-  background-size: auto, 44px 44px, 44px 44px, auto;
+  background-size: auto, auto, 44px 44px, 44px 44px, auto;
   overflow-x: hidden;
 }
 
@@ -206,8 +207,14 @@ h2 {
 /* timeline */
 .timeline { list-style: none; display: grid; gap: 2rem; }
 .timeline__item {
-  border: 1px solid var(--border); border-radius: var(--radius);
-  background: var(--panel); padding: 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.16); border-radius: var(--radius);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    rgba(18, 18, 24, 0.58);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 16px 40px rgba(0, 0, 0, 0.28);
+  padding: 2.4rem;
   position: relative;
 }
 .timeline__item::before {
@@ -241,8 +248,14 @@ h2 {
 .cards::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
 .cards .card { scroll-snap-align: start; }
 .card, .panel {
-  border: 1px solid var(--border); border-radius: var(--radius);
-  background: var(--panel); padding: 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.16); border-radius: var(--radius);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    rgba(18, 18, 24, 0.58);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 16px 40px rgba(0, 0, 0, 0.28);
+  padding: 2.2rem;
   transition: border-color 0.15s, transform 0.15s;
 }
 .card:hover { border-color: rgba(255, 50, 88, 0.45); transform: translateY(-2px); }
@@ -282,7 +295,7 @@ h2 {
 .skill-grid .panel { scroll-snap-align: start; }
 
 .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
-.panel--accent { border-color: rgba(255, 50, 88, 0.45); background: linear-gradient(rgba(255,50,88,0.06), transparent), var(--panel); }
+.panel--accent { border-color: rgba(255, 50, 88, 0.45); background: linear-gradient(rgba(255,50,88,0.07), rgba(255,50,88,0.02)), rgba(18, 18, 24, 0.58); }
 .panel p { color: #c9c6d4; font-size: 1.6rem; }
 .interests { margin-top: 1.6rem; }
 .interest-grid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(24rem, 28rem); overflow-x: auto; gap: 1.2rem; margin-top: 1.6rem; padding-bottom: 0.8rem; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
@@ -294,7 +307,7 @@ h2 {
 .reviews-row { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1rem; }
 .review { margin: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; max-width: 32rem; }
 .review img { display: block; width: 100%; height: auto; }
-.interest { margin: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--panel-2); }
+.interest { margin: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: rgba(22, 22, 29, 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .interest img { display: block; width: 100%; height: 14rem; object-fit: cover; }
 .interest figcaption { padding: 1rem 1.2rem; font-size: 1.35rem; color: var(--muted); }
 
@@ -370,3 +383,25 @@ body.user-is-tabbing :focus-visible { outline: 2px solid var(--accent); outline-
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- lightbox ---------- */
+.card__media img, .interest img, .review img, img.about__photo { cursor: zoom-in; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center; padding: 4vmin;
+  background: rgba(6, 6, 10, 0.8);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  cursor: zoom-out;
+}
+.lightbox.open { opacity: 1; visibility: visible; transition: opacity 0.3s ease; }
+.lightbox figure { margin: 0; max-width: min(94vw, 120rem); text-align: center; }
+.lightbox img {
+  max-width: 100%; max-height: 82vh; border-radius: 10px;
+  border: 1px solid var(--border);
+  transform: scale(0.96) translateY(8px);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lightbox.open img { transform: none; }
+.lightbox figcaption { margin-top: 1.2rem; font-family: var(--mono); font-size: 1.3rem; color: var(--muted); }

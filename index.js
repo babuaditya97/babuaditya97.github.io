@@ -98,3 +98,45 @@ if ('IntersectionObserver' in window && sections.length) {
 /* Footer year */
 const yearEl = document.querySelector('#year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+/* Lightbox for content images */
+(() => {
+  const SELECTOR = '.card__media img, .interest img, .review img, img.about__photo';
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Image viewer');
+  overlay.innerHTML = '<figure><img alt="" /><figcaption></figcaption></figure>';
+  document.body.appendChild(overlay);
+  const viewImg = overlay.querySelector('img');
+  const viewCap = overlay.querySelector('figcaption');
+
+  const open = (img) => {
+    viewImg.src = img.currentSrc || img.src;
+    viewImg.alt = img.alt || '';
+    viewCap.textContent = img.alt || '';
+    viewCap.hidden = !img.alt;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    viewImg.removeAttribute('src');
+  };
+
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest(SELECTOR);
+    if (img) {
+      open(img);
+      return;
+    }
+    if (e.target.closest('.lightbox')) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+  });
+})();
