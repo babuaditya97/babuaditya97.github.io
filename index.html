@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,252 +6,457 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <!-- Put your site title here -->
-  <title>
-    Aditya Babu | A Software Engineer based in Kerala, India.
-  </title>
+  <title>Aditya Babu | Lead AI Engineer — AI Systems, LLM Apps &amp; Data</title>
 
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <meta name="description"
+    content="Aditya Babu is a Lead AI Engineer in Toronto building LLM-powered systems, RAG assistants, evaluation platforms, and data pipelines on GCP, Azure, and AWS." />
+  <meta name="keywords"
+    content="Aditya Babu, Lead AI Engineer, ML Engineer, LLM, RAG, LangChain, Vertex AI, FastAPI, Python, GCP, Azure, portfolio" />
+  <meta name="author" content="Aditya Babu" />
+  <meta property="og:title" content="Aditya Babu | Lead AI Engineer" />
+  <meta property="og:description"
+    content="AI systems, LLM apps, evaluation platforms, and data engineering. Toronto, ON, Canada." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a0a0c" />
+  <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
+
+  <link rel="preload" href="./fonts/HKGrotesk-Regular.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="./fonts/Jost-Regular.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
+  <!-- ***** Top bar ***** -->
+  <header class="topbar" id="top">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand__mark" aria-hidden="true">~/</span>
+        <span class="brand__name">aditya.babu</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span aria-hidden="true">menu</span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
+          <li class="nav__item"><a href="#about" class="nav__link">about</a></li>
+          <li class="nav__item"><a href="#experience" class="nav__link">experience</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">projects</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">skills</a></li>
+          <li class="nav__item"><a href="#education" class="nav__link">education</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">contact</a></li>
+          <li class="nav__item nav__item--cta">
+            <a href="https://github.com/babuaditya97" class="nav__link nav__link--ext" target="_blank"
+              rel="noopener">github ↗</a>
           </li>
         </ul>
       </nav>
     </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Aditya Babu</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>A Software Engineer based in Kerala, India.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
-      </div>
-    </div>
   </header>
 
-  <main role="main">
-
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>Projects</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Emotion Detection from Face Images/Video</h3>
-              <p>
-                The Aim of the project is to faces from a given image/video and recognize the emotion the face is having. A real time prediction
-model was also able to achieve.
-              </p>
-              <ul class="work__list">
-                <li>Python</li>
-                <li>Keras</li>
-                <li>Convolutional Neural Networks</li>
-                <li>dlib</li>
-                <li>OpenCV</li>
-                <li>numpy</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/happy.png" class="work__image" alt="Project 3" />
-            </div>
+  <main id="main">
+    <!-- ***** Hero ***** -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__main">
+          <p class="prompt" aria-hidden="true"><span class="prompt__user">aditya</span><span
+              class="prompt__at">@</span><span class="prompt__host">toronto</span><span class="prompt__path">:~$</span>
+            whoami</p>
+          <h1 class="hero__title" id="hero-title">Aditya Babu</h1>
+          <p class="hero__role">Lead AI Engineer — LLM systems, evaluation platforms &amp; data</p>
+          <p class="hero__lede">
+            I design and ship production AI: RAG assistants, virtual-assistant evaluation
+            platforms, and cloud data pipelines. Currently focused on microservice LLM
+            systems on GCP with Next.js frontends and FastAPI backends.
+          </p>
+          <p class="hero__meta">
+            <span class="meta-chip"><span class="dot" aria-hidden="true"></span>Toronto, ON, Canada</span>
+            <span class="meta-chip">Open to collaborations</span>
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View projects</a>
+            <a href="#experience" class="btn">Experience</a>
+            <a href="#contact" class="btn">Contact</a>
           </div>
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Face Aging Application</h3>
-              <p>
-                A customer engagement tool which is to be deployed to an online platform for investments, where input to the application is a
-young face image and the output will be corresponding Aged face.
-              </p>
-              <ul class="work__list">
-                <li>Python</li>
-                <li>Generative Adversarial Networks</li>
-                <li>Pytorch</li>
-                <li>OpenCV</li>
-              </ul>
-
-              <!-- <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div> -->
-            </div>
-            <div class="work__image-box">
-              <img src="./images/age_tymer.JPG" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Signal Simulator</h3>
-              <p>
-                A Desktop application used to pack and sent data as data frames to a destination location based on an input configuration and time interval. Multithreaded program for generating packets with different
-configuration at single instance of time.
-              </p>
-              <ul class="work__list">
-                <li>Python Socket</li>
-                <li>Tkinter GUI</li>
-                <li>Python Multi-threading</li>
-                
-              </ul> 
-
-              <!-- <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div> -->
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-
+          <ul class="hero__links" aria-label="Profiles and contact">
+            <li><a href="https://github.com/babuaditya97" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/babuaditya97/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="mailto:adybabu11@gmail.com">adybabu11@gmail.com</a></li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- ***** Clients ***** -->
-
-    <section class="client" id="clients">
-      <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
-        </div>
+        <aside class="terminal" aria-label="Profile summary">
+          <div class="terminal__bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <dl class="terminal__body">
+            <div><dt>role</dt><dd>Lead AI Engineer</dd></div>
+            <div><dt>focus</dt><dd>LLM apps · evals · data</dd></div>
+            <div><dt>stack</dt><dd>Python · FastAPI · GCP · Vertex AI</dd></div>
+            <div><dt>status</dt><dd class="ok">● building eval platforms</dd></div>
+          </dl>
+        </aside>
       </div>
     </section>
 
     <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="eyebrow">01 — about</p>
+        <h2 id="about-title">Human first. Engineer and builder by practice, mindset, and curiosity.</h2>
+        <div class="about__grid">
+          <div class="about__photo-wrap">
+            <img class="about__photo" src="./images/about-portrait.jpg"
+              alt="Portrait of Aditya Babu" loading="lazy" width="614" height="821" />
+            <p class="caption">Toronto · working across AI, backend, and data</p>
+          </div>
           <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
             <p>
-              A Software Engineer and a Technology Enthusiast. Passionate about working with data, extracting insights from data and help businesses make data driven decisions. I have keen interest in visualizing data and simplifying complex data sets into comprehensive and appealing graphics.
-
-              Skilled in Python Programming, Feature Engineering, Data Visualization, Data Exploration (EDA), Model Tuning Skills, Advanced Natural Language Processing, Computer vision.
-              
-              Proactive in Machine Learning and Data analysis.
+              I&rsquo;m a seasoned Software Engineer and AI Engineer with a passion for harnessing
+              the power of AI and data-driven insights to help businesses make informed decisions.
+              My work spans Python engineering, machine learning, LLM systems, and cloud computing.
             </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
+            <p>
+              Recently I&rsquo;ve been building agentic workflows, RAG assistants, analytics over
+              customer communications and app reviews, ERP data migration tooling, and evaluation
+              platforms for virtual assistants — including transcript analysis, latency tracking,
+              and performance reporting.
+            </p>
+            <p>
+              Beyond delivery work, I enjoy teaching: I&rsquo;ve worked as a remote programming tutor
+              helping others grasp ML and AI fundamentals.
+            </p>
+            <ul class="fact-list">
+              <li><span>location</span>Toronto, ON, Canada</li>
+              <li><span>email</span><a href="mailto:adybabu11@gmail.com">adybabu11@gmail.com</a></li>
+              <li><span>phone</span><a href="tel:+14372630794">+1-437-263-0794</a></li>
+            </ul>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/aditya_babu.jpg" alt="" />
+    <!-- ***** Experience ***** -->
+    <section class="section section--alt" id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <p class="eyebrow">02 — experience</p>
+        <h2 id="exp-title">Where I&rsquo;ve shipped</h2>
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <img class="timeline__logo" src="./images/logo-prismcloud.png" alt="Prism Cloud Consulting — an Architech company logo" loading="lazy" />
+            <div class="timeline__head">
+              <h3>Prism Cloud Consulting Inc.</h3>
+              <p class="timeline__dates">Mar 2024 – Present</p>
+            </div>
+            <p class="timeline__org">Promoted from AI/ML Engineer to Lead AI Engineer</p>
+            <div class="timeline__role">
+              <div class="timeline__head">
+                <h4>Lead AI Engineer — virtual-assistant testing platform</h4>
+                <p class="timeline__dates">Oct 2025 – Present</p>
+              </div>
+              <ul>
+                <li>Leading work on a platform that tests virtual assistants and generates reports on performance, transcripts, and latency.</li>
+                <li>Microservice architecture on GCP behind a load balancer with cloud workload policies.</li>
+                <li>Next.js frontend with multiple FastAPI backend services for evaluation and reporting.</li>
+                <li>Transcript evaluation and reporting with DeepEval; voice/AI services including Deepgram, Cartesia, and ElevenLabs.</li>
+              </ul>
+              <ul class="tags tags--icons" aria-label="Technologies">
+                <li><img src="./images/skills/nextjs.svg" alt="" loading="lazy" class="invert" />Next.js</li><li><img src="./images/skills/fastapi.svg" alt="" loading="lazy" />FastAPI</li><li><img src="./images/skills/python.svg" alt="" loading="lazy" />Python</li><li><img src="./images/skills/gcp.svg" alt="" loading="lazy" />GCP</li><li>Microservices</li><li><span class="mono" aria-hidden="true">DE</span>DeepEval</li><li><img src="./images/skills/deepgram.svg" alt="" loading="lazy" />Deepgram</li><li><span class="mono" aria-hidden="true">Ca</span>Cartesia</li><li><img src="./images/skills/elevenlabs.svg" alt="" loading="lazy" />ElevenLabs</li>
+              </ul>
+            </div>
+            <div class="timeline__role">
+              <div class="timeline__head">
+                <h4>AI/ML Engineer</h4>
+                <p class="timeline__dates">Mar 2024 – Sep 2025</p>
+              </div>
+              <ul>
+                <li>Built AI agentic workflows for apps with the R&amp;D team.</li>
+                <li>GCP Cloud Adoption for a telecom company: dashboard analyzing Play Store reviews with Vertex AI and Gemini; AI-driven analytics on customer service communications with CCAI insights and Vertex AI.</li>
+                <li>AI data assistant for a North American coal transportation company: took a chatbot from POC to a production application connected to the client&rsquo;s BigQuery database, with a natural-language-to-SQL layer for plotting and conversing with operational data.</li>
+                <li>ERP migration project for a multinational luxury wristwatch and jewelry company: maintained a data migration tool converting legacy Jewel ERP data into Microsoft Dynamics 365 Business Central formats.</li>
+              </ul>
+              <ul class="tags tags--icons" aria-label="Technologies">
+                <li><img src="./images/skills/python.svg" alt="" loading="lazy" />Python</li><li><img src="./images/skills/langchain.svg" alt="" loading="lazy" />LangChain</li><li><img src="./images/skills/fastapi.svg" alt="" loading="lazy" />FastAPI</li><li><img src="./images/skills/docker.svg" alt="" loading="lazy" />Docker</li><li><img src="./images/skills/gcp.svg" alt="" loading="lazy" />Vertex AI</li><li><img src="./images/skills/gemini.svg" alt="" loading="lazy" />Gemini</li><li><img src="./images/skills/bigquery.svg" alt="" loading="lazy" />BigQuery</li><li><img src="./images/skills/looker.svg" alt="" loading="lazy" />Looker Studio</li><li><img src="./images/skills/gcp.svg" alt="" loading="lazy" />Cloud Functions</li><li><img src="./images/skills/gcp.svg" alt="" loading="lazy" />Cloud Storage</li><li><span class="mono" aria-hidden="true">CC</span>CCAI</li><li><img src="./images/skills/pandas.svg" alt="" loading="lazy" />Pandas</li><li><img src="./images/skills/matplotlib.svg" alt="" loading="lazy" />Matplotlib</li><li><img src="./images/skills/openai.svg" alt="" loading="lazy" />OpenAI APIs</li><li><img src="./images/skills/mssql.svg" alt="" loading="lazy" />MS SQL</li><li><span class="mono" aria-hidden="true">Xl</span>Xlwings</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <span class="logo-tile"><img src="./images/logo-travancore.png" alt="Travancore Analytics logo" loading="lazy" /></span>
+            <div class="timeline__head">
+              <h3>Software Engineer / Data Scientist — Travancore Analytics</h3>
+              <p class="timeline__dates">Oct 2020 – Mar 2022</p>
+            </div>
+            <ul>
+              <li>ML engineer on a project under the global After Sales department of a Fortune 500 automotive company, targeting customer satisfaction and retention.</li>
+              <li>Developed a desktop application supporting a real-time data monitoring system for satellite subsystems for a space research organization.</li>
+              <li>Involved in a cloud feasibility-cum-commercialization study for a healthcare project.</li>
+              <li>Collaborated closely with the Data Science team on data-driven software solutions.</li>
+            </ul>
+            <ul class="tags tags--icons" aria-label="Technologies">
+              <li><img src="./images/skills/python.svg" alt="" loading="lazy" />Python</li><li><img src="./images/skills/pandas.svg" alt="" loading="lazy" />Pandas</li><li><img src="./images/skills/snowflake.svg" alt="" loading="lazy" />Snowflake</li><li>SQL</li><li>Data pipelines</li><li>Tkinter</li><li><img src="./images/skills/gitlab.svg" alt="" loading="lazy" />GitLab CI</li><li><img src="./images/skills/keras.svg" alt="" loading="lazy" />Keras</li><li>Multithreading</li>
+            </ul>
+          </li>
+
+          <li class="timeline__item reveal">
+            <span class="logo-tile"><img src="./images/logo-hdfc-life.svg" alt="HDFC Life logo" loading="lazy" /></span>
+            <div class="timeline__head">
+              <h3>AI Intern — HDFC Life, Data Labs</h3>
+              <p class="timeline__dates">Jul 2020 – Oct 2020</p>
+            </div>
+            <ul>
+              <li>Researched and developed a customer engagement tool for an online investments and insurance platform.</li>
+              <li>Processed image data including enhancement and human face detection.</li>
+              <li>Implemented computer-vision solutions from scratch in Python, including GAN-based deep learning techniques.</li>
+            </ul>
+            <ul class="tags tags--icons" aria-label="Technologies">
+              <li><img src="./images/skills/python.svg" alt="" loading="lazy" />Python</li><li><img src="./images/skills/pytorch.svg" alt="" loading="lazy" />PyTorch</li><li>GANs</li><li>Computer vision</li>
+            </ul>
+          </li>
+
+          <li class="timeline__item reveal">
+            <span class="logo-tile"><img src="./images/logo-luein.png" alt="Luein Analytics logo" loading="lazy" /></span>
+            <div class="timeline__head">
+              <h3>Data Science Intern — Luein Analytics</h3>
+              <p class="timeline__dates">Jan 2020 – Apr 2020</p>
+            </div>
+            <ul>
+              <li>Built a resume parser extracting structured information from multiple file formats.</li>
+              <li>Performed text analytics on unstructured data with NLTK and SpaCy, including named-entity recognition.</li>
+              <li>Data cleaning, feature scaling, and feature engineering with NumPy and Pandas; regression, classification, clustering, and NLP for information retrieval.</li>
+            </ul>
+            <ul class="tags tags--icons" aria-label="Technologies">
+              <li><img src="./images/skills/python.svg" alt="" loading="lazy" />Python</li><li><span class="mono" aria-hidden="true">NL</span>NLTK</li><li><span class="mono" aria-hidden="true">Sp</span>SpaCy</li><li><img src="./images/skills/scikitlearn.svg" alt="" loading="lazy" />scikit-learn</li><li><img src="./images/skills/tensorflow.svg" alt="" loading="lazy" />TensorFlow</li><li><img src="./images/skills/opencv.svg" alt="" loading="lazy" />OpenCV</li><li><img src="./images/skills/ibm.svg" alt="" loading="lazy" />IBM Cloud</li><li>python-docx</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ***** Projects ***** -->
+    <section class="section" id="projects" aria-labelledby="proj-title">
+      <div class="wrap">
+        <p class="eyebrow">03 — projects</p>
+        <h2 id="proj-title">Selected work</h2>
+        <p class="section__lede">Industry systems first, then independent AI builds. Descriptions stay close to the source material; no company names are invented.</p>
+
+        <h3 class="subhead">Industry systems</h3>
+        <div class="cards">
+          <article class="card reveal">
+            <p class="card__kicker">Prism Cloud · testing platform</p>
+            <h4>Virtual-assistant testing &amp; evaluation platform</h4>
+            <p>Microservice platform that exercises virtual assistants and reports on transcripts, latency, and performance. Next.js UI backed by multiple FastAPI services on GCP, with DeepEval-powered evaluation and reporting.</p>
+            <ul class="tags"><li>Next.js</li><li>FastAPI</li><li>GCP</li><li>DeepEval</li><li>Deepgram</li><li>Cartesia</li><li>ElevenLabs</li></ul>
+          </article>
+          <article class="card reveal">
+            <p class="card__kicker">GCP Cloud Adoption · telecom</p>
+            <h4>Review &amp; support analytics with Vertex AI</h4>
+            <p>Dashboard analyzing mobile-app Play Store reviews with Vertex AI and Gemini, plus AI-driven analytics over customer service communications using CCAI insights to support satisfaction and decision-making.</p>
+            <ul class="tags"><li>Vertex AI</li><li>Gemini</li><li>BigQuery</li><li>Looker Studio</li><li>CCAI</li><li>Cloud Functions</li></ul>
+          </article>
+          <article class="card reveal">
+            <p class="card__kicker">Production AI assistant · logistics</p>
+            <h4>Natural-language data assistant with visualizations</h4>
+            <p>Production application connected to the client&rsquo;s BigQuery database: translates natural-language questions into SQL so users can plot and converse with operational data. Evolved from an initial POC into a live production system.</p>
+            <ul class="tags"><li>Python</li><li>LangChain</li><li>FastAPI</li><li>BigQuery</li><li>Text-to-SQL</li><li>Pandas</li><li>Matplotlib</li><li>Docker</li><li>OpenAI</li><li>Gemini</li></ul>
+          </article>
+          <article class="card reveal">
+            <p class="card__kicker">ERP migration · luxury retail</p>
+            <h4>Legacy WJewel ERP → Dynamics 365 migration tool</h4>
+            <p>Maintained and updated a data migration tool converting legacy ERP records into Microsoft Dynamics 365 Business Central formats for a multinational jewelry company.</p>
+            <ul class="tags"><li>Python</li><li>Xlwings</li><li>MS SQL</li><li>Dynamics 365</li></ul>
+          </article>
+        </div>
+
+        <h3 class="subhead">AI builds &amp; open source</h3>
+        <div class="cards">
+          <article class="card reveal">
+            <figure class="card__media">
+              <img src="./images/last-tab-toggle.jpg" alt="Last Tab Toggle store hero showing the neon popup with Alt+Q shortcut picker" loading="lazy" />
+            </figure>
+            <p class="card__kicker">Browser extension · productivity</p>
+            <h4>Last Tab Toggle</h4>
+            <p>Manifest V3 Chrome extension that flips between your current and last active tab with one shortcut (Alt+Q / Option+Q) — even across windows. Neon popup with a custom shortcut recorder; 100% private, no data collected.</p>
+            <ul class="tags"><li>JavaScript</li><li>Chrome APIs</li></ul>
+            <p class="card__links"><a href="https://chromewebstore.google.com/detail/onkngmofagmgbioeglfjocgjbipijkaf" target="_blank" rel="noopener">Web Store ↗</a> · <a href="https://github.com/babuaditya97/last-tab-chrome-extension" target="_blank" rel="noopener">Source ↗</a></p>
+          </article>
+          <article class="card reveal">
+            <figure class="card__media">
+              <img src="./images/qa-bot-architecture.png" alt="RAG pipeline diagram: a question and docs flow through an embedding model and vector document store into a prompt, with an LLM generating the answer" loading="lazy" />
+            </figure>
+            <p class="card__kicker">RAG · docs QA</p>
+            <h4>DocuSage</h4>
+            <p>DocuSage is a retrieval-augmented generation system that retrieves tool documentation, augments context, and generates grounded answers to user queries.</p>
+            <ul class="tags"><li>LangChain</li><li>ChromaDB</li><li>OpenAI</li></ul>
+          </article>
+          <article class="card reveal">
+            <figure class="card__media card__media--duo">
+              <img src="./images/roxyai-home.jpg" alt="RoxyAI home screen greeting the user" loading="lazy" />
+              <img src="./images/roxyai-answer.jpg" alt="RoxyAI answering a question about quantum machine learning" loading="lazy" />
+            </figure>
+            <p class="card__kicker">Flutter · voice + generative AI</p>
+            <h4>RoxyAI</h4>
+            <p>Experimental Flutter AI app using Google text-to-speech/speech services with OpenAI DALL·E and GPT-3.5 Turbo for intelligent responses.</p>
+            <ul class="tags"><li>Flutter</li><li>OpenAI APIs</li><li>Google TTS</li></ul>
+            <p class="card__links"><a href="https://github.com/babuaditya97/RoxyAI" target="_blank" rel="noopener">Source ↗</a></p>
+          </article>
+          <article class="card reveal">
+            <figure class="card__media">
+              <img src="./images/anti-spoiler-popup.png" alt="Anti-Spoiler extension popup with Blur Reviews and Unblur Reviews buttons" loading="lazy" />
+            </figure>
+            <p class="card__kicker">Browser extension · NLP</p>
+            <h4>Anti-Spoiler for IMDb</h4>
+            <p>Chrome extension that detects and blocks spoilers in IMDb movie and TV reviews using background ML models.</p>
+            <figure class="card__media">
+              <img src="./images/anti-spoiler-architecture.png" alt="Anti-Spoiler architecture: webpage calls a model deployed on Azure ML and renders the API response" loading="lazy" />
+            </figure>
+            <ul class="tags"><li>scikit-learn</li><li>NLTK</li><li>Azure ML</li></ul>
+          </article>
+          <article class="card reveal">
+            <figure class="card__media">
+              <img src="./images/inclusive-architecture.png" alt="Inclusive.ai system architecture: sound acquisition via PowerApps, Azure facilitator module, and ML backbone with Azure ML and DALL·E 2" loading="lazy" />
+            </figure>
+            <p class="card__kicker">Accessibility · real-time ML</p>
+            <h4>Inclusive.ai</h4>
+            <p>Mobile app listening to environmental sounds and predicting them in real time, plus speech-to-contextual-image conversion. Recognized among the top 5 Canada-wide projects in the Microsoft AI for Accessibility 2023 challenge.</p>
+            <ul class="tags"><li>PyTorch</li><li>Azure ML</li></ul>
+          </article>
+        </div>
+        <p class="more">More experiments live on <a href="https://github.com/babuaditya97" target="_blank" rel="noopener">GitHub ↗</a>.</p>
+      </div>
+    </section>
+
+    <!-- ***** Skills ***** -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <p class="eyebrow">04 — skills</p>
+        <h2 id="skills-title">Stack, grouped by job to be done</h2>
+        <div class="skill-grid">
+          <article class="panel reveal">
+            <h3>AI / LLM systems</h3>
+            <ul class="tags tags--icons"><li><img src="./images/skills/langchain.svg" alt="" loading="lazy" />LangChain</li><li>RAG</li><li><img src="./images/skills/gcp.svg" alt="" loading="lazy" />Vertex AI</li><li><img src="./images/skills/gemini.svg" alt="" loading="lazy" />Gemini</li><li><img src="./images/skills/openai.svg" alt="" loading="lazy" />OpenAI APIs</li><li><span class="mono" aria-hidden="true">DE</span>DeepEval</li><li><img src="./images/skills/pytorch.svg" alt="" loading="lazy" />PyTorch</li><li><img src="./images/skills/keras.svg" alt="" loading="lazy" />Keras</li><li><img src="./images/skills/tensorflow.svg" alt="" loading="lazy" />TensorFlow</li><li><img src="./images/skills/scikitlearn.svg" alt="" loading="lazy" />scikit-learn</li><li><span class="mono" aria-hidden="true">NL</span>NLTK</li><li><span class="mono" aria-hidden="true">Sp</span>SpaCy</li><li><span class="mono" aria-hidden="true">Ch</span>ChromaDB</li></ul>
+          </article>
+          <article class="panel reveal">
+            <h3>Backend &amp; APIs</h3>
+            <ul class="tags tags--icons"><li><img src="./images/skills/python.svg" alt="" loading="lazy" />Python</li><li><img src="./images/skills/fastapi.svg" alt="" loading="lazy" />FastAPI</li><li><img src="./images/skills/flask.svg" alt="" loading="lazy" class="invert" />Flask</li><li><img src="./images/skills/nodejs.svg" alt="" loading="lazy" />Node.js</li><li>REST APIs</li><li><img src="./images/skills/nextjs.svg" alt="" loading="lazy" class="invert" />Next.js</li><li><img src="./images/skills/flutter.svg" alt="" loading="lazy" />Flutter</li><li>Microservices</li></ul>
+          </article>
+          <article class="panel reveal">
+            <h3>Data engineering</h3>
+            <ul class="tags tags--icons"><li>SQL</li><li><img src="./images/skills/bigquery.svg" alt="" loading="lazy" />BigQuery</li><li><img src="./images/skills/snowflake.svg" alt="" loading="lazy" />Snowflake</li><li>ETL/ELT pipelines</li><li><img src="./images/skills/pandas.svg" alt="" loading="lazy" />Pandas</li><li>Dask</li><li><img src="./images/skills/numpy.svg" alt="" loading="lazy" />NumPy</li><li><img src="./images/skills/matplotlib.svg" alt="" loading="lazy" />Matplotlib</li><li><img src="./images/skills/looker.svg" alt="" loading="lazy" />Looker Studio</li><li>Multithreading</li></ul>
+          </article>
+          <article class="panel reveal">
+            <h3>Cloud &amp; databases</h3>
+            <ul class="tags tags--icons"><li><img src="./images/skills/gcp.svg" alt="" loading="lazy" />GCP Cloud Run</li><li><img src="./images/skills/gcp.svg" alt="" loading="lazy" />GCS</li><li><img src="./images/skills/gcp.svg" alt="" loading="lazy" />Cloud Functions</li><li><img src="./images/skills/azure.svg" alt="" loading="lazy" />Azure ML</li><li><img src="./images/skills/azure.svg" alt="" loading="lazy" />Cognitive Services</li><li><img src="./images/skills/aws.svg" alt="" loading="lazy" />AWS Lambda</li><li><img src="./images/skills/aws.svg" alt="" loading="lazy" />S3</li><li><img src="./images/skills/aws.svg" alt="" loading="lazy" />SageMaker Studio</li><li><img src="./images/skills/mssql.svg" alt="" loading="lazy" />MS SQL Server</li><li><img src="./images/skills/mysql.svg" alt="" loading="lazy" />MySQL</li><li><img src="./images/skills/ibm.svg" alt="" loading="lazy" />IBM Cloud</li></ul>
+          </article>
+          <article class="panel reveal">
+            <h3>Delivery tooling</h3>
+            <ul class="tags tags--icons"><li><img src="./images/skills/git.svg" alt="" loading="lazy" />Git</li><li><img src="./images/skills/gitlab.svg" alt="" loading="lazy" />GitLab CI</li><li><img src="./images/skills/docker.svg" alt="" loading="lazy" />Docker</li><li><img src="./images/skills/jira.svg" alt="" loading="lazy" />JIRA</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Education ***** -->
+    <section class="section" id="education" aria-labelledby="edu-title">
+      <div class="wrap">
+        <p class="eyebrow">05 — education</p>
+        <h2 id="edu-title">Education &amp; recognition</h2>
+        <div class="edu-grid">
+          <article class="panel reveal">
+            <p class="card__kicker">2023 · Toronto</p>
+            <h3>Ontario College Graduate Certificate — AI &amp; Data Science</h3>
+            <p>Loyalist College in Toronto.</p>
+          </article>
+          <article class="panel reveal">
+            <p class="card__kicker">2019 · Kerala, India</p>
+            <h3>B.Tech — Computer Science Engineering</h3>
+            <p>APJ Abdul Kalam Kerala Technological University.</p>
+          </article>
+          <article class="panel reveal panel--accent">
+            <p class="card__kicker">Recognition</p>
+            <h3>Microsoft AI for Accessibility Challenge 2023 — Canada-wide Top 5</h3>
+            <p>Inclusive.ai qualified among the final five nationwide accessibility AI solutions.</p>
+          </article>
+        </div>
+        <div class="panel reveal interests">
+          <h3>Beyond the terminal</h3>
+          <div class="interest-grid">
+            <figure class="interest">
+              <img src="./images/interest-travel.jpg" alt="Hiker overlooking a mountain lake" loading="lazy" />
+              <figcaption>Traveler — collecting boarding passes, street food, and "you should've been here" stories.</figcaption>
+            </figure>
+            <figure class="interest">
+              <img src="./images/interest-podcasts.jpg" alt="Collage of podcast cover art" loading="lazy" />
+              <figcaption>Podcast listener — everything at 1.5x speed, with strong opinions about ad reads.</figcaption>
+            </figure>
+            <figure class="interest">
+              <img src="./images/interest-reading.jpg" alt="Nietzsche quote on truth and illusion" loading="lazy" />
+              <figcaption>Non-fiction reader — reads Nietzsche for fun. Still (allegedly) fun at parties.</figcaption>
+            </figure>
+            <figure class="interest">
+              <img src="./images/interest-tutoring.jpg" alt="Kids learning with numbers and an abacus" loading="lazy" />
+              <figcaption>Remote programming tutor — 5 stars from students, zero mercy for homework.</figcaption>
+            </figure>
+            <figure class="interest">
+              <img src="./images/interest-ielts.jpg" alt="IELTS invigilator overseeing a test room" loading="lazy" />
+              <figcaption>Chief IELTS invigilator — the red vest means silence. No pressure.</figcaption>
+            </figure>
           </div>
+          <p class="reviews-label">From some of my students…</p>
+          <div class="reviews-row">
+            <figure class="review">
+              <img src="./images/review-student-1.png" alt="Five-star student review praising clear Python fundamentals teaching" loading="lazy" />
+            </figure>
+            <figure class="review">
+              <img src="./images/review-student-2.png" alt="Five-star student review on debugging help and Python practice" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Contact ***** -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <p class="eyebrow">06 — contact</p>
+        <h2 id="contact-title">Let&rsquo;s build something useful</h2>
+        <p class="section__lede">Best way to reach me is email. I&rsquo;m in Toronto and collaborate remotely.</p>
+        <div class="contact__grid">
+          <a class="contact__card" href="mailto:adybabu11@gmail.com">
+            <span class="contact__label">email</span>
+            <span class="contact__value">adybabu11@gmail.com</span>
+          </a>
+          <a class="contact__card" href="tel:+14372630794">
+            <span class="contact__label">phone</span>
+            <span class="contact__value">+1-437-263-0794</span>
+          </a>
+          <a class="contact__card" href="https://github.com/babuaditya97" target="_blank" rel="noopener">
+            <span class="contact__label">github</span>
+            <span class="contact__value">babuaditya97 ↗</span>
+          </a>
+          <a class="contact__card" href="https://www.linkedin.com/in/babuaditya97/" target="_blank" rel="noopener">
+            <span class="contact__label">linkedin</span>
+            <span class="contact__value">babuaditya97 ↗</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Looking for a person to make value out of data?
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="https://www.linkedin.com/in/babuaditya97/" class="btn">Contact me</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ***** Footer ***** -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <!-- <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li> -->
-        <li class="footer__social-link-item">
-          <a href="https://github.com/babuaditya97" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        <!-- </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li> -->
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/babuaditya97/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> Aditya Babu · Toronto, ON</p>
+      <ul class="footer__links">
+        <li><a href="https://github.com/babuaditya97" target="_blank" rel="noopener" aria-label="GitHub profile"><img src="./images/github.svg" alt="" width="20" height="20" />GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/babuaditya97/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><img src="./images/linkedin.svg" alt="" width="20" height="20" />LinkedIn</a></li>
+        <li><a href="mailto:adybabu11@gmail.com">Email</a></li>
       </ul>
-
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <!-- <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div> -->
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Back to top">
+    <img src="./images/arrow-up.svg" alt="" class="back-to-top__image" width="20" height="20" />
   </a>
   <script src="./index.js"></script>
 </body>
